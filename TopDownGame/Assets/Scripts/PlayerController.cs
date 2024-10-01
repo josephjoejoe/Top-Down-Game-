@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -49,4 +50,15 @@ public class PlayerController : MonoBehaviour
         transform.position = newPosition;
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //check if colliding with a game object with specific tag
+        if (collision.gameObject.tag.Equals("door1"))
+        {
+            Debug.Log("change scene");
+            SceneManager.LoadScene(1);
+        }
+    }
+
 }
