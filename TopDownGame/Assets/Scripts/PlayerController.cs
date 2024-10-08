@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("door2") && hasKey == true)
         {
             Debug.Log("unlocked door");
+            SceneManager.LoadScene(3);
         }
     }
 

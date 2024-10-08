@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SheriffOffice.unity
     guid: c467561f63ff64d8d9ad2422392c41c9
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: cb388f11018ca4a97b3b35070d92bc98
   m_configObjects: {}
