@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;//importing sceneManagement Library 
 
 public class PlayerController : MonoBehaviour
 {
@@ -58,6 +58,12 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("change scene");
             SceneManager.LoadScene(1);
+        }
+
+        if (collision.gameObject.tag.Equals("SheriffDoor"))
+        {
+            Debug.Log("change scene");
+            SceneManager.LoadScene(2);
         }
     }
 
