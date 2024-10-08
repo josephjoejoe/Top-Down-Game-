@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private SpriteRenderer sr;
+    public bool hasKey = false;
+
     //sprite variables
     public Sprite upSprite;
     public Sprite leftSprite;
     public Sprite rightSprite;
     public Sprite downSprite;
-
+    
     //public Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -64,6 +66,17 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("change scene");
             SceneManager.LoadScene(2);
+        }
+
+        if (collision.gameObject.tag.Equals("key"))
+        {
+            Debug.Log("obtained key");
+            hasKey = true; // player has the key
+        }
+        // you need to collide with the door AND have the key for it to be true  
+        if (collision.gameObject.tag.Equals("door2") && hasKey == true)
+        {
+            Debug.Log("unlocked door");
         }
     }
 

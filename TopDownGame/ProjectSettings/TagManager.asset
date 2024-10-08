@@ -6,6 +6,7 @@ TagManager:
   tags:
   - door1
   - SheriffDoor
+  - key
   layers:
   - Default
   - TransparentFX
