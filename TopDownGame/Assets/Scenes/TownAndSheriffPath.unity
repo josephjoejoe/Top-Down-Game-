@@ -3780,7 +3780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348663531}
   m_Layer: 0
-  m_Name: Sheriff House Path
+  m_Name: Sheriff Office Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7349,7 +7349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 750345211}
   m_Layer: 0
-  m_Name: Sheriff House Door
+  m_Name: Sheriff Office Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
