@@ -14,12 +14,20 @@ public class PlayerController : MonoBehaviour
     public Sprite leftSprite;
     public Sprite rightSprite;
     public Sprite downSprite;
-    
-    //public Rigidbody2D rb;
+
+    public static PlayerController instance;
+
     // Start is called before the first frame update
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        if(instance != null) //if another of the player i sin the scene 
+        {
+            Destroy(gameObject); // then destroy it 
+        }
+
+        instance = this; // reasign the instance to th current player
+        GameObject.DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
@@ -48,7 +56,6 @@ public class PlayerController : MonoBehaviour
             //change sprite to up sprite 
             sr.sprite = upSprite;
         }
-        
         transform.position = newPosition;
 
     }
@@ -79,6 +86,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("unlocked door");
             SceneManager.LoadScene(3);
         }
+
     }
 
 }
