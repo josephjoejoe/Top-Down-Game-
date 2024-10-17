@@ -15,11 +15,16 @@ public class PlayerController : MonoBehaviour
     public Sprite rightSprite;
     public Sprite downSprite;
 
+    //audio variables
+    public AudioSource soundEffects;
+    public AudioClip[] sounds;
+
     public static PlayerController instance;
 
     // Start is called before the first frame update
     void Start()
     {
+        soundEffects = GetComponent<AudioSource>();
         sr = GetComponent<SpriteRenderer>();
         if(instance != null) //if another of the player i sin the scene 
         {
@@ -66,24 +71,28 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag.Equals("door1"))
         {
             Debug.Log("change scene");
+            soundEffects.PlayOneShot(sounds[1], .7f);  // .7f is the volume
             SceneManager.LoadScene(1);
         }
 
         if (collision.gameObject.tag.Equals("SheriffDoor"))
         {
             Debug.Log("change scene");
+            soundEffects.PlayOneShot(sounds[1], .7f);
             SceneManager.LoadScene(2);
         }
 
         if (collision.gameObject.tag.Equals("key"))
         {
             Debug.Log("obtained key");
+            soundEffects.PlayOneShot(sounds[0], .7f); 
             hasKey = true; // player has the key
         }
         // you need to collide with the door AND have the key for it to be true  
         if (collision.gameObject.tag.Equals("door2") && hasKey == true)
         {
             Debug.Log("unlocked door");
+            soundEffects.PlayOneShot(sounds[1], .7f);
             SceneManager.LoadScene(3);
         }
 
