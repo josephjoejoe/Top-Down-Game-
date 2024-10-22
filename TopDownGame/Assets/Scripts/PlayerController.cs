@@ -103,6 +103,11 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(3);
         }
 
+        if (collision.gameObject.tag.Equals("ExitTownDoor") && hasKey == true)
+        {
+            soundEffects.PlayOneShot(sounds[1], .7f);
+            SceneManager.LoadScene(1);
+        }
     }
 
 }

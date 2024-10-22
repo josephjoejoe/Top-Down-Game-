@@ -9,6 +9,7 @@ TagManager:
   - key
   - door2
   - ExitSheriffDoor
+  - ExitTownDoor
   layers:
   - Default
   - TransparentFX
