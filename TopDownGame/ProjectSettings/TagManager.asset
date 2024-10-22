@@ -8,6 +8,7 @@ TagManager:
   - SheriffDoor
   - key
   - door2
+  - ExitSheriffDoor
   layers:
   - Default
   - TransparentFX

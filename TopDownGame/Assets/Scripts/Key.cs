@@ -23,7 +23,7 @@ public class Key : MonoBehaviour
         {
             Destroy(this.gameObject); //destroy the key
             Debug.Log("ive been collected!");
-            //keySound.Play();
+            keySound.Play();
         }
     }
 }

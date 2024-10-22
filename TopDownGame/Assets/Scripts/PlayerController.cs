@@ -82,6 +82,13 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(2);
         }
 
+        if (collision.gameObject.tag.Equals("ExitSheriffDoor"))
+        {
+            Debug.Log("change scene");
+            soundEffects.PlayOneShot(sounds[1], .7f);
+            SceneManager.LoadScene(4);
+        }
+
         if (collision.gameObject.tag.Equals("key"))
         {
             Debug.Log("obtained key");
