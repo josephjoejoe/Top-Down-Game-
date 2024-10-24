@@ -108,6 +108,34 @@ public class PlayerController : MonoBehaviour
             soundEffects.PlayOneShot(sounds[1], .7f);
             SceneManager.LoadScene(1);
         }
+
+        if (collision.gameObject.tag.Equals("TownHouseDoor"))
+        {
+            Debug.Log("change scene");
+            soundEffects.PlayOneShot(sounds[1], .7f);
+            SceneManager.LoadScene(5);
+        }
+
+        if (collision.gameObject.tag.Equals("TownHouse1Door"))
+        {
+            Debug.Log("change scene");
+            soundEffects.PlayOneShot(sounds[1], .7f);
+            SceneManager.LoadScene(6);
+        }
+
+        if (collision.gameObject.tag.Equals("TownHouse2Door"))
+        {
+            Debug.Log("change scene");
+            soundEffects.PlayOneShot(sounds[1], .7f);
+            SceneManager.LoadScene(7);
+        }
+
+        if (collision.gameObject.tag.Equals("TownHouse3Door"))
+        {
+            Debug.Log("change scene");
+            soundEffects.PlayOneShot(sounds[1], .7f);
+            SceneManager.LoadScene(8);
+        }
     }
 
 }

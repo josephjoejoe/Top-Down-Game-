@@ -3,17 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - door1
-  - SheriffDoor
-  - key
-  - door2
-  - ExitSheriffDoor
-  - ExitTownDoor
-  - TownHouseDoor
-  - TownHouse1Door
-  - TownHouse2Door
-  - TownHouse3Door
+  tags: []
   layers:
   - Default
   - TransparentFX
