@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TownHouse3.unity
     guid: 48ac55ac16e164a739050a2e76476723
+  - enabled: 1
+    path: Assets/Scenes/EndOfGame.unity
+    guid: d45cd63e2859f415789eaec54ac4876d
   m_configObjects: {}

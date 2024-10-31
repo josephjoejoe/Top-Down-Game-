@@ -16,6 +16,9 @@ TagManager:
   - TownHouse3Door
   - TownHouseExitDoor
   - TownHouse1ExitDoor
+  - TownHouse2ExitDoor
+  - SheriffPaper
+  - Safe
   layers:
   - Default
   - TransparentFX

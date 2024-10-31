@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     private SpriteRenderer sr;
     public bool hasKey = false;
+    public bool hasSheriffPaper = false;
 
     //sprite variables
     public Sprite upSprite;
@@ -95,12 +96,23 @@ public class PlayerController : MonoBehaviour
             soundEffects.PlayOneShot(sounds[0], .7f); 
             hasKey = true; // player has the key
         }
+        if (collision.gameObject.tag.Equals("SheriffPaper"))
+        {
+            Debug.Log("obtained Sheriff Paper");
+            hasSheriffPaper = true; // player has the paper
+        }
         // you need to collide with the door AND have the key for it to be true  
         if (collision.gameObject.tag.Equals("door2") && hasKey == true)
         {
             Debug.Log("unlocked door");
             soundEffects.PlayOneShot(sounds[1], .7f);
             SceneManager.LoadScene(3);
+        }
+        if (collision.gameObject.tag.Equals("Safe") && hasSheriffPaper == true)
+        {
+            Debug.Log("unlocked Safe");
+            soundEffects.PlayOneShot(sounds[1], .7f);
+            SceneManager.LoadScene(9);
         }
 
         if (collision.gameObject.tag.Equals("ExitTownDoor") && hasKey == true)
@@ -141,6 +153,12 @@ public class PlayerController : MonoBehaviour
             soundEffects.PlayOneShot(sounds[1], .7f);
             SceneManager.LoadScene(7);
         }
+        if (collision.gameObject.tag.Equals("TownHouse2ExitDoor"))
+        {
+            Debug.Log("change scene");
+            soundEffects.PlayOneShot(sounds[1], .7f);
+            SceneManager.LoadScene(3);
+        }
 
         if (collision.gameObject.tag.Equals("TownHouse3Door"))
         {
@@ -148,6 +166,7 @@ public class PlayerController : MonoBehaviour
             soundEffects.PlayOneShot(sounds[1], .7f);
             SceneManager.LoadScene(8);
         }
+
     }
 
 }
