@@ -114,12 +114,12 @@ public class PlayerController : MonoBehaviour
             soundEffects.PlayOneShot(sounds[1], .7f);
             SceneManager.LoadScene(9);
         }
-
-        if (collision.gameObject.tag.Equals("ExitTownDoor") && hasKey == true)
+        if (collision.gameObject.tag.Equals("ExitTownDoor"))
         {
             soundEffects.PlayOneShot(sounds[1], .7f);
             SceneManager.LoadScene(1);
         }
+
 
         if (collision.gameObject.tag.Equals("TownHouseDoor"))
         {

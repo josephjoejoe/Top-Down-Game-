@@ -2648,6 +2648,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8276713511517121036, guid: c39d0779e67ca4509aebf6cbb36c10ef, type: 3}
+      propertyPath: hasSheriffPaper
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
